@@ -2,6 +2,8 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 import joblib
+from pathlib import Path
+BASE_DIR = Path(__file__).resolve().parent.parent  # repo root
 
 # -------------------
 # Helpers
@@ -24,27 +26,25 @@ def conversion_by_bin(df, col, bins, labels=None):
 
 @st.cache_data
 def load_model():
-    model = joblib.load("rf_conversion_model_final.pkl")
-    feature_cols = joblib.load("rf_feature_cols_final.pkl")
-    return model, feature_cols
+    model_path = BASE_DIR / "models" / "rf_conversion_model_final.pkl"
+    cols_path = BASE_DIR / "models" / "rf_feature_cols_final.pkl"
+    return joblib.load(model_path), joblib.load(cols_path)
 
 
 @st.cache_data
 def load_model_dataset():
-    try:
-        df = pd.read_csv("customer_conversion_model_dataset.csv")
-        return df
-    except FileNotFoundError:
-        return None
+    path = BASE_DIR / "data" / "raw" / "customer_conversion_model_dataset.csv"
+    if path.exists():
+        return pd.read_csv(path)
+    return None
 
 
 @st.cache_data
 def load_feature_importance():
-    try:
-        fi = pd.read_csv("feature_importance_random_forest.csv")
-        return fi
-    except FileNotFoundError:
-        return None
+    path = BASE_DIR / "models" / "feature_importance_random_forest.csv"
+    if path.exists():
+        return pd.read_csv(path)
+    return None
 
 
 # -------------------
