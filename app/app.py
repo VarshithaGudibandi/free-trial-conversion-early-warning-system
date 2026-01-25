@@ -197,7 +197,7 @@ with h1:
             <p style="font-size:14px;color:#6b7280;margin-bottom:6px;">
                 Predicted conversion probability
             </p>
-            <p style="font-size:40px;font-weight:800;margin:0;">
+            <p style="font-size:40px;font-weight:800;margin:0;color:#111827">
                 {prediction:.2f}%
             </p>
             <p style="font-size:13px;color:#9ca3af;margin-top:10px;">
@@ -213,7 +213,7 @@ with h2:
         """
         <div style="padding:22px;border-radius:12px;border:1px solid #e5e7eb;">
             <p style="font-size:14px;font-weight:800;margin:0;">Risk interpretation</p>
-            <ul style="font-size:13px;line-height:1.8;margin-top:10px;">
+            <ul style="font-size:13px;line-height:1.8;margin-top:10px;color:#111827">
                 <li><b>High risk:</b> low engagement & weak activation</li>
                 <li><b>Medium risk:</b> intent present, needs guidance</li>
                 <li><b>Low risk:</b> strong activation & consistent use</li>
