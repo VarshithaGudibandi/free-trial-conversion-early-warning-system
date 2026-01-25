@@ -211,28 +211,14 @@ with h1:
 with h2:
     st.markdown(
         """
-        <div style="
-            padding:22px;
-            border-radius:12px;
-            border:1px solid #e5e7eb;
-            background:#ffffff;
-        ">
-            <p style="font-size:14px;font-weight:800;color:#111827;margin:0;">
-                Risk interpretation
-            </p>
-
-            <ul style="
-                font-size:13px;
-                line-height:1.8;
-                margin-top:10px;
-                color:#111827;
-            ">
+        <div style="padding:22px;border-radius:12px;border:1px solid #e5e7eb;">
+            <p style="font-size:14px;font-weight:800;margin:0;">Risk interpretation</p>
+            <ul style="font-size:13px;line-height:1.8;margin-top:10px;">
                 <li><b>High risk:</b> low engagement & weak activation</li>
                 <li><b>Medium risk:</b> intent present, needs guidance</li>
                 <li><b>Low risk:</b> strong activation & consistent use</li>
             </ul>
-
-            <p style="font-size:13px;color:#4b5563;margin-top:10px;">
+            <p style="font-size:13px;color:#6b7280;margin-top:10px;">
                 Use this output to trigger targeted onboarding, feature education, and lifecycle messaging.
             </p>
         </div>
